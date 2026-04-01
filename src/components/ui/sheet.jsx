@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Dialog as SheetPrimitive } from "radix-ui"
+import * as Dialog from "@radix-ui/react-dialog"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -10,25 +10,25 @@ import { XIcon } from "lucide-react"
 function Sheet({
   ...props
 }) {
-  return <SheetPrimitive.Root data-slot="sheet" {...props} />;
+  return <Dialog.Root data-slot="sheet" {...props} />;
 }
 
 function SheetTrigger({
   ...props
 }) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
+  return <Dialog.Trigger data-slot="sheet-trigger" {...props} />;
 }
 
 function SheetClose({
   ...props
 }) {
-  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
+  return <Dialog.Close data-slot="sheet-close" {...props} />;
 }
 
 function SheetPortal({
   ...props
 }) {
-  return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
+  return <Dialog.Portal data-slot="sheet-portal" {...props} />;
 }
 
 function SheetOverlay({
@@ -36,7 +36,7 @@ function SheetOverlay({
   ...props
 }) {
   return (
-    <SheetPrimitive.Overlay
+    <Dialog.Overlay
       data-slot="sheet-overlay"
       className={cn(
         "fixed inset-0 z-50 bg-black/10 duration-100 supports-backdrop-filter:backdrop-blur-xs data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0",
@@ -56,7 +56,7 @@ function SheetContent({
   return (
     <SheetPortal>
       <SheetOverlay />
-      <SheetPrimitive.Content
+      <Dialog.Content
         data-slot="sheet-content"
         data-side={side}
         className={cn(
@@ -66,14 +66,14 @@ function SheetContent({
         {...props}>
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close data-slot="sheet-close" asChild>
+          <Dialog.Close data-slot="sheet-close" asChild>
             <Button variant="ghost" className="absolute top-3 right-3" size="icon-sm">
               <XIcon />
               <span className="sr-only">Close</span>
             </Button>
-          </SheetPrimitive.Close>
+          </Dialog.Close>
         )}
-      </SheetPrimitive.Content>
+      </Dialog.Content>
     </SheetPortal>
   );
 }
@@ -107,7 +107,7 @@ function SheetTitle({
   ...props
 }) {
   return (
-    <SheetPrimitive.Title
+    <Dialog.Title
       data-slot="sheet-title"
       className={cn("font-heading text-base font-medium text-foreground", className)}
       {...props} />
@@ -119,7 +119,7 @@ function SheetDescription({
   ...props
 }) {
   return (
-    <SheetPrimitive.Description
+    <Dialog.Description
       data-slot="sheet-description"
       className={cn("text-sm text-muted-foreground", className)}
       {...props} />
