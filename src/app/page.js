@@ -1,9 +1,16 @@
+import NavBar from "@/components/NavBar";
+import TopBar from "@/components/TopBar";
+import NotificationsScroll from "@/app/components/NotificationsScroll";
+import Hero from "@/app/components/Hero";
 import Image from "next/image";
+import StatusBar from "./components/StatusBar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      
-    </div>
+    <>
+      <NotificationsScroll/>
+      <Hero/>
+      <StatusBar/>
+    </>
   );
 }
