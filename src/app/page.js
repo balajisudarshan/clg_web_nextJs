@@ -6,6 +6,7 @@ import Image from "next/image";
 import StatusBar from "./components/StatusBar";
 import Achievements from "./components/Achievements";
 import Slider from "./components/Slider";
+import Departments_Programs from "./components/Departments_Programs";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <StatusBar/>
       <Achievements/>
       {/* <Slider/> */}
+      <Departments_Programs/>
     </>
   );
 }
