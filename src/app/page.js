@@ -4,6 +4,8 @@ import NotificationsScroll from "@/app/components/NotificationsScroll";
 import Hero from "@/app/components/Hero";
 import Image from "next/image";
 import StatusBar from "./components/StatusBar";
+import Achievements from "./components/Achievements";
+import Slider from "./components/Slider";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <NotificationsScroll/>
       <Hero/>
       <StatusBar/>
+      <Achievements/>
+      {/* <Slider/> */}
     </>
   );
 }

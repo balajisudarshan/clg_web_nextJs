@@ -42,7 +42,7 @@ const Hero = () => {
           text-3xl  md:text-5xl lg:text-7xl">
 
           Engineering{" "}
-          <span className="text-[#E29820]">Excellence</span>
+          <span className="text-[var(--color-text-primary)]">Excellence</span>
           <br />
           Since 1979
         </h1>
