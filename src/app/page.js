@@ -23,7 +23,7 @@ export default function Home() {
       <Recruiters/>
       <Explore/>
       <LeaderShip_Students/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

@@ -13,7 +13,6 @@ import {
 
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
-// ===== DATA =====
 const aboutLinks = [
   { name: "About Institute", href: "/about" },
   { name: "Vision & Mission", href: "/about/visionmission" },
