@@ -7,6 +7,7 @@ import StatusBar from "./components/StatusBar";
 import Achievements from "./components/Achievements";
 import Slider from "./components/Slider";
 import Departments_Programs from "./components/Departments_Programs";
+import Recruiters from "./components/Recruiters";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Achievements/>
       {/* <Slider/> */}
       <Departments_Programs/>
+      <Recruiters/>
     </>
   );
 }
