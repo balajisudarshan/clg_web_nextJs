@@ -26,10 +26,10 @@ const Departments_Programs = () => {
 
             {/* GRID */}
             <div className='max-w-7xl mx-auto px-4 mt-10'>
-                <div className='grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px] '>
 
                     {/* BIG CARD */}
-                    <div className='md:col-span-2 md:row-span-2 relative rounded-xl overflow-hidden group cursor-pointer'>
+                    <div className='md:col-span-3 md:row-span-2 relative rounded-xl overflow-hidden group cursor-pointer'>
 
                         <img
                             src='/images/course/aiml_ds.png'
@@ -48,8 +48,8 @@ const Departments_Programs = () => {
                                 AI & Data Science
                             </h2>
 
-                            <div className='opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0'>
-                                <p className='text-sm mt-2'>
+                            <div className='opacity-100 md:opacity-0 translate-y-0 md:translate-y-4 transition-all duration-300 md:group-hover:opacity-100 group-hover:translate-y-0'>
+                                <p className='text-sm mt-2 hidden md:block'>
                                     Build intelligent systems with machine learning, big data, and analytics.
                                 </p>
 
@@ -61,7 +61,6 @@ const Departments_Programs = () => {
                         </div>
                     </div>
 
-                    {/* SMALL CARD TEMPLATE */}
                     {[
                         { img: "cse.png", title: "Computer Science Engineering" },
                         { img: "ece.png", title: "Electronics & Communication" },
@@ -84,8 +83,8 @@ const Departments_Programs = () => {
                                     {item.title}
                                 </h3>
 
-                                <div className='opacity-0 translate-y-3 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0'>
-                                    <p className='text-xs mt-1'>
+                                <div className=' opacity-100  translate-y-0 md:opacity-0 md:translate-y-3 transition-all duration-300 md:group-hover:opacity-100 group-hover:translate-y-0'>
+                                    <p className='text-xs mt-1 font-bold text-yellow-400  md:block'>
                                         Explore this department →
                                     </p>
                                 </div>
