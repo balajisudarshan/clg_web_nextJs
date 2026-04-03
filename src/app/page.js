@@ -8,7 +8,9 @@ import Achievements from "./components/Achievements";
 import Slider from "./components/Slider";
 import Departments_Programs from "./components/Departments_Programs";
 import Recruiters from "./components/Recruiters";
-
+import Explore from "./components/Explore";
+import LeaderShip_Students from "./components/LeaderShip_Students";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
@@ -19,6 +21,9 @@ export default function Home() {
       {/* <Slider/> */}
       <Departments_Programs/>
       <Recruiters/>
+      <Explore/>
+      <LeaderShip_Students/>
+      <Footer/>
     </>
   );
 }
