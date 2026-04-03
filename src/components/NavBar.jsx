@@ -16,10 +16,10 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 // ===== DATA =====
 const aboutLinks = [
   { name: "About Institute", href: "/about" },
-  { name: "Vision & Mission", href: "/vision" },
-  { name: "Governing Body", href: "/governing-body" },
-  { name: "Organization Structure", href: "/orgStructure" },
-  { name: "Right To Information", href: "/right-to-information" },
+  { name: "Vision & Mission", href: "/about/visionmission" },
+  { name: "Governing Body", href: "/about/governingbody" },
+  { name: "Organization Structure", href: "/about/organizationstructure" },
+  { name: "Right To Information", href: "/about/right-to-information" },
 ]
 
 const adminLinks = [
@@ -76,7 +76,7 @@ const navMenus = [
 // ===== COMPONENT =====
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
-
+  const [openDropdown, setOpenDropdown] = useState(null)
   const navItem =
     "hover:text-orange-500 transition cursor-pointer"
 
@@ -84,7 +84,7 @@ const Navbar = () => {
     "cursor-pointer hover:text-orange-500 hover:border-b-2 hover:border-orange-500 transition flex items-center gap-1 pb-1"
 
   const dropdownMenu =
-    "absolute left-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50"
+    "absolute left-0 top-full w-56 bg-white rounded-xl shadow-lg opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50"
 
   const dropdownItem =
     "block px-4 py-2 text-sm hover:bg-orange-50 hover:border-l-4 hover:border-orange-500 transition-all"
@@ -110,18 +110,33 @@ const Navbar = () => {
           </li>
 
           {navMenus.map((menu) => (
-            <li key={menu.title} className="relative">
-              <div className="group inline-block">
-                <span className={dropdownTrigger}>
-                  {menu.title} ▾
-                </span>
-                <div className={dropdownMenu}>
-                  {menu.data.map((link) => (
-                    <Link key={link.href} href={link.href} className={dropdownItem}>
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
+            <li
+              key={menu.title}
+              className="relative"
+              onMouseEnter={() => setOpenDropdown(menu.title)}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <span className={dropdownTrigger}>
+                {menu.title} ▾
+              </span>
+
+              <div
+                className={`absolute left-0 top-full w-56 bg-white rounded-xl shadow-lg transition-all duration-200 z-50
+      ${openDropdown === menu.title
+                    ? "opacity-100 translate-y-0 pointer-events-auto"
+                    : "opacity-0 translate-y-1 pointer-events-none"
+                  }`}
+              >
+                {menu.data.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={dropdownItem}
+                    onClick={() => setOpenDropdown(null)} // 🔥 THIS FIXES CLICK CLOSE
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </li>
           ))}
