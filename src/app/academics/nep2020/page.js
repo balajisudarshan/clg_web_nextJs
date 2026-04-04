@@ -22,6 +22,30 @@ const faculty = [
     position: "Member",
     contact: "drarsreddy@nbkrist.org",
   },
+  {
+    name:"Dr. Narayana Rao Appini",
+    role:"Professor & HOD-IT | AI&DS",
+    position:"Member",
+    contact:"narayanaraoappini@nbkrist.org"
+  },
+  {
+    name:"Dr.G.HARINATHA REDDY",
+    role:"Professor & HOD-ECE",
+    position:"Member",
+    contact:"reddyghr@nbkrist.org"
+  },
+  {
+    name:"Dr. S. Suresh Reddy",
+    role:"Professor & HOD-EEE",
+    position:"Member",
+    contact:"sanna_suresh@nbkrist.org"
+  },
+  {
+    name:"Dr.Ch.R.Vikram Kumar",
+    role:"Professor & HOD-MECHANICAL",
+    position:"Member",
+    contact:"mehod@nbkrist.org"
+  }
 ]
 
 export default function Page() {
