@@ -30,7 +30,7 @@ const adminLinks = [
 
 const academicLinks = [
   { name: "Academic Programs", href: "/academics/programs" },
-  { name: "Academic Calendar", href: "/academic-calendar" },
+  { name: "Academic Calendar", href: "/academics/calendar" },
   { name: "NEP 2020 Initiatives", href: "/nep-2020" },
   { name: "Syllabus", href: "/syllabus" },
   { name: "Outcome Based Education", href: "/obe" },
