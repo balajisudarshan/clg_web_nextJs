@@ -4,10 +4,14 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { links } from "./SideBar"
+import { links, getDeptLinks, deptMap } from "./SideBar"
 
-export default function MobileSidebar() {
+export default function MobileSidebar({dept, code: propCode}) {
   const pathname = usePathname()
+  const code = propCode || (pathname.startsWith('/departments/') ? pathname.split('/')[2] : null)
+    const menu = (dept && code) ? getDeptLinks(code) : links
+
+  const deptName = deptMap[code] || "Department"
 
   return (
     <div className="md:hidden p-3 bg-white border-b flex items-center">
@@ -20,7 +24,7 @@ export default function MobileSidebar() {
         <SheetContent side="left" className="w-64 bg-sky-600 text-white p-0">
 
           <div className="px-4 py-4 font-semibold border-b border-white/20">
-            Library
+            {(dept && code) ? deptName : "Library"}
           </div>
 
           <div className="flex flex-col px-2 py-3 space-y-1">
@@ -45,7 +49,7 @@ export default function MobileSidebar() {
       </Sheet>
 
       <span className="ml-3 font-semibold text-gray-800">
-        Library
+        {(dept && code) ? deptName : "Library"}
       </span>
 
     </div>
