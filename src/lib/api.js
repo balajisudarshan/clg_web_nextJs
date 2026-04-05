@@ -34,14 +34,14 @@ export async function api(endpoint, options = {}) {
         localStorage.removeItem("token");
         localStorage.removeItem("userRole");
         // Use an absolute path to prevent redirect bugs when deep in nested routes
-        window.location.href = "/admin/login"; 
+        window.location.href = "/admin/login";
     }
 
     if (!res.ok) {
         let error;
         try {
             error = await res.json();
-        } catch(e) {
+        } catch (e) {
             error = { message: "Something went wrong" };
         }
         throw new Error(error.message || "Failed to fetch data.");

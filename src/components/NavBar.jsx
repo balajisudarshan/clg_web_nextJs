@@ -60,7 +60,7 @@ const moreLinks = [
   { name: "Annual Reports", href: "/annual-reports" },
   { name: "IQAC", href: "/iqac" },
   { name: "Innovation & Incubation", href: "/innovation" },
-  { name: "E-News Letter", href: "/newsletter" },
+  // { name: "E-News Letter", href: "/newsletter" },
 ]
 
 const navMenus = [
