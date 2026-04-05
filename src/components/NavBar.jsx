@@ -25,7 +25,7 @@ const adminLinks = [
   { name: "Director", href: "/director" },
   { name: "Administrative Officer", href: "/admin-officer" },
   { name: "Controller of Examinations", href: "/exam-controller" },
-  { name: "Admin Dashboard", href: "/admin-dashboard" },
+  { name: "Admin Dashboard", href: "/admin" },
 ]
 
 const academicLinks = [
