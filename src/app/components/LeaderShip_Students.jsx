@@ -115,7 +115,7 @@ const LeaderShip_Students = () => {
                     {/* TESTIMONIAL CARDS */}
                     <div className='flex flex-col gap-5 mt-10'>
                         {testimonals.map((testi, index) => (
-                            <Card className='bg-[#1e293b] border-none rounded-xl hover:-translate-1 transition-all shadow-md p-5'>
+                            <Card key={index} className='bg-[#1e293b] border-none rounded-xl hover:-translate-1 transition-all shadow-md p-5'>
                                 <CardContent>
                                     <p className='text-gray-300 italic mb-4'>
                                         {testi.feedback}
@@ -138,7 +138,7 @@ const LeaderShip_Students = () => {
                         ))}
 
 
-                      
+
 
                     </div>
                 </div>
