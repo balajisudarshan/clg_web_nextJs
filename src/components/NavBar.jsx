@@ -39,13 +39,13 @@ const academicLinks = [
 ]
 
 const departmentLinks = [
-  { name: "Civil Engineering", href: "/departments/2/faculty" },
+  { name: "Civil Engineering", href: "/departments/" },
   { name: "CSE | AI&ML | DS", href: "/departments/" },
-  { name: "IT | AI&DS", href: "/it" },
-  { name: "Electronics & Comm.", href: "/ece" },
-  { name: "Electrical & Electronics", href: "/eee" },
-  { name: "Mechanical Engineering", href: "/mech" },
-  { name: "Sciences & Humanities", href: "/science" },
+  { name: "IT | AI&DS", href: "/departments/" },
+  { name: "Electronics & Comm.", href: "/departments/" },
+  { name: "Electrical & Electronics", href: "/departments/" },
+  { name: "Mechanical Engineering", href: "/departments/" },
+  { name: "Sciences & Humanities", href: "/departments/" },
 ]
 
 const placementLinks = [
