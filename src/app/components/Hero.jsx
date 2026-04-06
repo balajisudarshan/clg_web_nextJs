@@ -52,8 +52,8 @@ const Hero = () => {
           text-xs sm:text-sm md:text-base lg:text-lg 
           max-w-xl md:max-w-2xl">
 
-          NBKR Institute of Science & Technology, Vidyanagar <br/> shaping engineers and innovators
-          for a rapidly evolving world. <br/>Affiliated to JNTU, Ananthapuramu,Recognized by AP Govt. 
+         <u>NBKR Institute of Science & Technology, Vidyanagar </u> <br/> Shaping engineers and innovators
+          for a rapidly evolving world. <br/>Affiliated to JNTU, Ananthapuramu, Recognized by AP Govt. 
         </p>
 
         {/* Buttons */}
